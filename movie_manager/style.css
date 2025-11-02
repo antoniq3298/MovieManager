@@ -1,0 +1,208 @@
+/* ==============================
+   ГЛОБАЛНИ НАСТРОЙКИ И ФОН
+============================== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  color: #1b1a1a;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(rgba(25, 25, 25, 0.8), rgba(40, 40, 40, 0.85)),
+    url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   КОНТЕЙНЕРИ И ГРИД
+============================== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.container.small {
+  width: 320px;
+  max-width: 320px;
+  min-width: 320px;
+  display: block; /* блоков контейнер */
+  margin: 50px auto;
+  background: rgba(220, 203, 242, 0.85);
+  color: #171717;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+}
+
+/* ==============================
+   КАРТИ ЗА ФИЛМИ
+============================== */
+.card {
+  background: rgba(249, 248, 249, 0.85);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ==============================
+   ТЕКСТ И ЗАГЛАВИЯ
+============================== */
+h1, h2 {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+h3 {
+  color: #171717;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   ФОРМИ
+============================== */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(70, 70, 70, 0.7);
+  color: #fff;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
+  color: #0b0b0b;
+}
+
+/* ==============================
+   БУТОНИ
+============================= */
+.btn {
+  display: block;              /* блоков, няма да се разтяга */
+  max-width: 200px;            /* максимална ширина */
+  padding: 6px 12px;
+  border-radius: 10px;
+  
+  border: none;
+  background: linear-gradient(135deg, #484848, #222222);
+  color: #fefdfd;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;              /* центриране */
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #7a7a7a, #555);
+  transform: scale(1.05);
+}
+
+/* Вторичен бутон */
+.btn.secondary {
+  background: linear-gradient(135deg, #948aac, #5e5670);
+}
+
+.btn.secondary:hover {
+  background: linear-gradient(135deg, #948aac, #5e5670);
+}
+
+/* Опасен бутон */
+.btn.danger {
+  background: linear-gradient(135deg, #9170b5, #8567a5);
+}
+
+.btn.danger.black-text {
+  color: #000 !important;
+}
+
+.btn.danger:hover {
+  background: linear-gradient(135deg, #9170b5, #765c92);
+}
+
+/* ==============================
+   СПЕЦИАЛНИ БУТОНИ 🎥 и ⎋
+============================= */
+.add-movie-btn,
+.logout-btn,
+.login-btn,
+.register-btn {
+  display: block;
+  width: 120px;              /* фиксирана ширина */
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #948aac, #5e5670);
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 10px auto;         /* центриране */
+  flex: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.add-movie-btn:hover,
+.logout-btn:hover,
+.login-btn:hover,
+.register-btn:hover {
+  background: linear-gradient(135deg, #948aac, #5e5670);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ==============================
+   ДРЕБНИ ЕЛЕМЕНТИ
+============================= */
+.error {
+  color: #ff9c9c;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 18px;
+  color: #aaa;
+}
+
+/* ==============================
+   ЛИНКОВЕ
+============================= */
+a {
+  color: #d5d3f7;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
